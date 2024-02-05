@@ -2,6 +2,12 @@
 
 PalWorld commonly used scripts.
 
+First fo all, add execute permission for every script:
+
+```sh
+chmod +x *.sh
+```
+
 ## Install
 
 ```sh
