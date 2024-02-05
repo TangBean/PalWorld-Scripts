@@ -14,7 +14,7 @@ chmod +x *.sh
 # Only install
 ./install.sh 
 
-# Install & 
+# Install & Enable zram & Enable auto restart
 ./install.sh --enable-zram --enable-auto-restart
 ```
 
