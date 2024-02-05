@@ -4,7 +4,7 @@ service_name="pal-server.service"
 mem_threshold=88  # 内存利用率百分比，超过这个百分比就会重启 pal-server
 
 mem_usage_percent=$(free | awk '/Mem:/ {printf("%.0f", $3/$2 * 100.0)}')
-echo "System Memory Usage: $mem_usage_percent%"
+#echo "System Memory Usage: $mem_usage_percent%"
 
 current_time=$(date +"%Y-%m-%d %H:%M:%S")
 if [ "$mem_usage_percent" -ge "$mem_threshold" ]; then
