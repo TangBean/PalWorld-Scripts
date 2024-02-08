@@ -23,7 +23,7 @@ sudo cp -R "${source_dir}/." "${backup_dir}/"
 
 # tar 命令打包后删除 backup_dir
 backup_filename="${backup_dir}.tar.gz"
-tar -cpzvf "${backup_filename}" "${backup_dir}" && sudo rm -rf "${backup_dir}"
+tar -cpzf "${backup_filename}" "${backup_dir}" && sudo rm -rf "${backup_dir}"
 
 # 删除该文件夹下超过 15 天的 tar.gz
 find $backup_parent_dir -mtime +15 -name "*.tar.gz" -exec sudo rm -rf {} \;
