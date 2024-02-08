@@ -52,16 +52,12 @@ auto_restart.sh  auto_update.sh  install.sh  mem_usage.sh  README.md  restart.sh
 
 $ chmod +x *.sh
 
-$ ./auto_restart.sh
-Restart script name: /home/ubuntu/PalWorld-Scripts/restart.sh
-no crontab for ubuntu
-
-$ ./auto_update.sh
-Restart script name: /home/ubuntu/PalWorld-Scripts/update.sh
+$ ./auto_runner.sh
 
 $ crontab -l
 * * * * * /bin/bash /home/ubuntu/PalWorld-Scripts/restart.sh >> /tmp/pal-restart.log 2>&1
 0 4 * * * /bin/bash /home/ubuntu/PalWorld-Scripts/update.sh >> /tmp/pal-update.log 2>&1
+0 3 * * * /bin/bash /home/ubuntu/PalWorld-Scripts/backup.sh >> /tmp/pal-backup.log 2>&1
 
 $ ./mem_usage.sh
 System Memory Usage: 36%
