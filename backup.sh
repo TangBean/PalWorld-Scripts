@@ -4,7 +4,7 @@
 backup_parent_dir="/home/ubuntu/.steam/palback"
 
 # 要备份的目录
-source_dir="/home/steam/Steam/steamapps/common/PalServer/Pal/Saved/"
+source_dir="/home/steam/Steam/steamapps/common/PalServer/Pal/Saved"
 
 
 # 获取当前日期
@@ -19,7 +19,7 @@ backup_dir="${backup_parent_dir}/${backup_dir_name}"
 mkdir -p "${backup_dir}"
 
 # 复制目录内容到备份目录
-cp -R "${source_dir}/." "${backup_dir}/"
+sudo cp -R "${source_dir}/." "${backup_dir}/"
 
 # tar 命令打包后删除 backup_dir
 tar -cpzvf "${backup_dir}.tar.gz" "${backup_dir}" && rm -rf "${backup_dir}"
