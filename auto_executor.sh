@@ -20,8 +20,9 @@ if [ -z "$script_name" ] || [ -z "$period" ]; then
     exit 1
 fi
 
-script_name="$script_name.sh"
+script_name="${script_name%.sh}"
 log_file="/tmp/pal-$script_name.log"
+script_name="$script_name.sh"
 
 current_path=$(dirname "$(readlink -f "$0")")
 script_name="$current_path/$script_name"
