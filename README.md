@@ -1,5 +1,7 @@
 # PalWorld-Scripts
 
+[An article about how to use this script collection](https://u0htbttevtr.feishu.cn/wiki/H6QTwjqYWi6GdXkGxNlcL50Lnkg?from=from_copylink)
+
 PalWorld commonly used scripts.
 
 First fo all, add execute permission for every script:
